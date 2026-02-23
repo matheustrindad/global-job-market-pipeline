@@ -4,12 +4,14 @@ import os
 import logging
 from datetime import datetime
 
-# Função de ajuda para Senioridade [NOVO]
+# 1. Definição da Função (Apenas uma vez)
 def classify_seniority(title):
     t = str(title).lower()
-    if any(x in t for x in ['sr', 'senior', 'sênior', 'lead', 'pleno']): return 'Senior/Pleno'
-    if any(x in t for x in ['jr', 'junior', 'júnior', 'estagiário', 'intern']): return 'Junior'
-    return 'Mid/Not Specified'
+    if any(x in t for x in ['sr', 'senior', 'sênior', 'lead', 'principal', 'staff']): 
+        return 'Senior'
+    if any(x in t for x in ['jr', 'junior', 'júnior', 'estagiário', 'intern', 'entry']): 
+        return 'Junior'
+    return 'Mid-Level'
 
 def validate_job(row):
     if not row['title'] or str(row['title']).strip() == "": return False
@@ -19,7 +21,7 @@ def validate_job(row):
 
 def transform_data():
     today = datetime.now().strftime("%Y-%m-%d")
-    raw_base_path = "data/bronze" # Atualizado para Bronze
+    raw_base_path = "data/bronze"
     
     os.makedirs("data/silver", exist_ok=True)
     os.makedirs("data/quarantine", exist_ok=True)
@@ -27,7 +29,7 @@ def transform_data():
     all_jobs = []
     logging.info("Starting data transformation...")
 
-    # Leitura (Multi-country)
+    # --- PASSO 1: LEITURA DOS ARQUIVOS ---
     if not os.path.exists(raw_base_path):
         logging.error("Pasta Bronze não encontrada!")
         return {"processed": 0, "quarantined": 0}
@@ -48,6 +50,7 @@ def transform_data():
         logging.warning("No data found to transform.")
         return {"processed": 0, "quarantined": 0}
 
+    # --- PASSO 2: CRIAÇÃO DO DATAFRAME E LIMPEZA ---
     df = pd.DataFrame(all_jobs)
 
     for col in ['company', 'location', 'category']:
@@ -64,33 +67,35 @@ def transform_data():
         'country_code': 'country'
     }
     
+    # Filtra e renomeia apenas depois que o DF existe!
     df = df[[c for c in rename_map.keys() if c in df.columns]].copy()
     df.rename(columns=rename_map, inplace=True)
 
-    # Limpeza e Novas Colunas [Diferencial]
+    # --- PASSO 3: APLICAÇÃO DA LÓGICA DE SENIORIDADE E TEMPO ---
     df.drop_duplicates(inplace=True)
     df['salary_min'] = pd.to_numeric(df['salary_min'], errors='coerce').fillna(0)
     df['salary_max'] = pd.to_numeric(df['salary_max'], errors='coerce').fillna(0)
-    df['seniority'] = df['title'].apply(classify_seniority) # IA de classificação simples
-    df['extracted_at'] = datetime.now().isoformat() # Rastreabilidade temporal
+    
+    # Agora sim, aplicamos a senioridade com o DF já pronto
+    df['seniority'] = df['title'].apply(classify_seniority) 
+    df['extracted_at'] = datetime.now().isoformat()
 
+    # --- PASSO 4: VALIDAÇÃO E QUARENTENA ---
     df['is_valid'] = df.apply(validate_job, axis=1)
 
     processed_df = df[df['is_valid'] == True].drop(columns=['is_valid'])
     quarantine_df = df[df['is_valid'] == False].drop(columns=['is_valid'])
 
-    # Salvando em Silver
+    # --- PASSO 5: SALVAMENTO ---
     processed_df.to_csv(f"data/silver/jobs_clean_{today}.csv", index=False)
     quarantine_df.to_csv(f"data/quarantine/invalid_{today}.csv", index=False)
 
     logging.info(f"TRANSFORMATION SUMMARY: {len(processed_df)} jobs processed.")
     
-    # RETORNO PARA O MAIN.PY [VITAL]
     return {
         "processed": len(processed_df),
         "quarantined": len(quarantine_df)
     }
 
 if __name__ == "__main__":
-    # Quando rodar sozinho, apenas chama a função
     transform_data()
