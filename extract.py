@@ -28,35 +28,35 @@ def fetch_adzuna_data(country_code):
     app_id = os.getenv("ADZUNA_APP_ID")
     app_key = os.getenv("ADZUNA_APP_KEY")
     
-    # 3. Validate Credentials 
     if not app_id or not app_key:
         logging.error("Missing API credentials. Check your .env file.")
         return False
 
-    url = f"https://api.adzuna.com/v1/api/jobs/{country_code}/search/1?app_id={app_id}&app_key={app_key}/results_per_page=10&what=data%20engineer"
+    # CORREÇÃO DA URL: Trocado / por &
+    url = f"https://api.adzuna.com/v1/api/jobs/{country_code}/search/1?app_id={app_id}&app_key={app_key}&results_per_page=10&what=data%20engineer"
     
     print(f"Starting extraction: {country_code.upper()}...")
     
     try:
-        os.makedirs(f"data/raw/{country_code}", exist_ok=True)
+        # GARANTIR PASTA BRONZE
+        os.makedirs(f"data/bronze/{country_code}", exist_ok=True)
         
         response = requests.get(url, timeout=10)
         response.raise_for_status() 
         
         data = response.json()
 
-        # 2. Validate if API returned results 
         if not data.get('results'):
             logging.warning(f"Empty results for {country_code.upper()}")
             return False
             
         today = datetime.now().strftime("%Y-%m-%d")
-        filename = f"data/raw/{country_code}/jobs_{today}.json"
+        # CAMINHO ATUALIZADO PARA BRONZE
+        filename = f"data/bronze/{country_code}/jobs_{today}.json"
         
         with open(filename, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=4)
             
-        # 1. Log Success with stats 
         logging.info(f"SUCCESS: Extracted {len(data['results'])} jobs from {country_code.upper()}")
         return True
 
