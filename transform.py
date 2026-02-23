@@ -1,28 +1,46 @@
 import pandas as pd
 import json
 import os
+import logging
 from datetime import datetime
+
+# Configuração do Logging (Rastreabilidade)
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[logging.FileHandler('logs/pipeline.log'), logging.StreamHandler()]
+)
 
 def validate_job(row):
     """
-    Diferencial: Função de validação para a Tabela de Quarentena.
-    Retorna True se o dado for válido, False caso contrário.
+    Diferencial: Validação avançada para a Tabela de Quarentena.
     """
-    # Checa: título não vazio e salário (se existir) não negativo
+    # 1. Título não pode ser vazio
     if not row['title'] or str(row['title']).strip() == "":
         return False
+    
+    # 2. Salário mínimo não pode ser negativo
     if row['salary_min'] < 0:
         return False
+        
+    # 3. Melhoria: Validar consistência entre min e max [DICA DA IA]
+    if row['salary_max'] > 0 and row['salary_max'] < row['salary_min']:
+        return False
+        
     return True
 
 def transform_data():
     today = datetime.now().strftime("%Y-%m-%d")
     raw_base_path = "data/raw"
+    
+    # Melhoria 1: Garantir que as pastas existem antes de salvar
+    os.makedirs("data/processed", exist_ok=True)
+    os.makedirs("data/quarantine", exist_ok=True)
+
     all_jobs = []
+    logging.info("Starting data transformation...")
 
-    print("Starting data transformation...")
-
-    # 1. Ler todos os JSONs coletados (Multi-country support)
+    # Leitura dos arquivos (Multi-country)
     for country in os.listdir(raw_base_path):
         country_path = os.path.join(raw_base_path, country)
         if os.path.isdir(country_path):
@@ -31,25 +49,21 @@ def transform_data():
                     with open(os.path.join(country_path, file), 'r', encoding='utf-8') as f:
                         data = json.load(f)
                         results = data.get('results', [])
-                        # Adiciona a informação do país em cada linha
                         for job in results:
                             job['country_code'] = country.upper()
                         all_jobs.extend(results)
 
     if not all_jobs:
-        print("No data found to transform.")
+        logging.warning("No data found to transform.")
         return
 
     df = pd.DataFrame(all_jobs)
 
-    # CORREÇÃO: Antes de tudo, vamos converter colunas que podem ser dicionários em texto
-    # A Adzuna envia 'company', 'location' e 'category' como objetos complexos
+    # Tratamento de dicionários e renomeação (conforme já fizemos)
     for col in ['company', 'location', 'category']:
         if col in df.columns:
-            # Extrai apenas o nome/display_name se for um dicionário, senão mantém como está
             df[col] = df[col].apply(lambda x: x.get('display_name') if isinstance(x, dict) else x)
 
-    # 2. Renomear colunas para nomes claros em inglês
     rename_map = {
         'title': 'title',
         'company': 'company_name',
@@ -60,30 +74,25 @@ def transform_data():
         'country_code': 'country'
     }
     
-    available_cols = [c for c in rename_map.keys() if c in df.columns]
-    df = df[available_cols]
+    df = df[[c for c in rename_map.keys() if c in df.columns]]
     df.rename(columns=rename_map, inplace=True)
 
-    # 3. Agora sim: remover duplicatas (não há mais dicionários nas colunas selecionadas)
+    # Limpeza e aplicação da Validação
     df.drop_duplicates(inplace=True)
     df['salary_min'] = pd.to_numeric(df['salary_min'], errors='coerce').fillna(0)
+    df['salary_max'] = pd.to_numeric(df['salary_max'], errors='coerce').fillna(0) # Adicionado
 
-    # 4. Aplicar Validação (Quarentena)
     df['is_valid'] = df.apply(validate_job, axis=1)
 
     processed_df = df[df['is_valid'] == True].drop(columns=['is_valid'])
     quarantine_df = df[df['is_valid'] == False].drop(columns=['is_valid'])
 
-    # 5. Salvar arquivos com data
-    processed_path = f"data/processed/jobs_clean_{today}.csv"
-    quarantine_path = f"data/quarantine/invalid_{today}.csv"
+    # Salvando os arquivos
+    processed_df.to_csv(f"data/processed/jobs_clean_{today}.csv", index=False)
+    quarantine_df.to_csv(f"data/quarantine/invalid_{today}.csv", index=False)
 
-    processed_df.to_csv(processed_path, index=False, encoding='utf-8')
-    quarantine_df.to_csv(quarantine_path, index=False, encoding='utf-8')
-
-    print(f"Transformation complete!")
-    print(f"Clean records: {len(processed_df)} saved to {processed_path}")
-    print(f"Quarantine records: {len(quarantine_df)} saved to {quarantine_path}")
+    # Melhoria 3: Logar o resumo para rastreabilidade
+    logging.info(f"TRANSFORMATION SUMMARY: {len(processed_df)} jobs processed, {len(quarantine_df)} jobs sent to quarantine.")
 
 if __name__ == "__main__":
     transform_data()
