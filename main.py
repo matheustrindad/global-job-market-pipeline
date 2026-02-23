@@ -19,29 +19,40 @@ def run_pipeline():
     logging.info("=== INICIANDO PIPELINE GLOBAL JOB MARKET ===")
 
     try:
-        # PASSO 1: EXTRAÇÃO (BRONZE)
+        # STEP 1: EXTRACTION (BRONZE)
         countries = ['br', 'us', 'gb', 'at']
-        logging.info(f"Passo 1/3: Extraindo dados para {countries}...")
+        logging.info(f"Step 1/3: Extracting data for {countries}...")
         for country in countries:
             fetch_adzuna_data(country)
 
-        # PASSO 2: TRANSFORMAÇÃO E VALIDAÇÃO (SILVER)
-        logging.info("Passo 2/3: Iniciando Transformação e Validação (Silver)...")
+        # STEP 2: TRANSFORMATION AND VALIDATION (SILVER)
+        logging.info("Step 2/3: Starting Transformation and Validation (Silver)...")
         metrics = transform_data()
         
-        # PASSO 3: AGREGAÇÃO ANALÍTICA (GOLD)
-        logging.info("Passo 3/3: Gerando tabelas de agregação (Gold)...")
+        # STEP 3: ANALYTIC AGGREGATION (GOLD)
+        logging.info("Step 3/3: Generating aggregation tables (Gold)...")
         generate_gold()
+
 
         end_time = time.time()
         duration = end_time - start_time
         
-        logging.info(f"=== PIPELINE FINALIZADO COM SUCESSO EM {duration:.2f}s ===")
+        # 1. Mensagem de conclusão em Inglês
+        finish_msg = f"=== PIPELINE COMPLETED SUCCESSFULLY IN {duration:.2f}s ==="
+        
+        # 2. Logando a mensagem
+        logging.info(finish_msg)
+        
+        # 3. Printando no terminal para visibilidade imediata
+        print(f"\n{finish_msg}")
+
         if metrics:
-            print(f"\nResumo: {metrics['processed']} vagas limpas e {metrics['quarantined']} na quarentena.")
+            # 4. Resumo final também em Inglês
+            print(f"Summary: {metrics['processed']} clean jobs and {metrics['quarantined']} in quarantine.")
 
     except Exception as e:
-        logging.error(f"FALHA NO PIPELINE: {e}")
+        logging.error(f"PIPELINE FAILED: {e}")
+        print(f"\nPIPELINE FAILED: {e}")
 
 if __name__ == "__main__":
     run_pipeline()
