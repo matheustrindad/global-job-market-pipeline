@@ -5,6 +5,7 @@ from datetime import datetime
 from extract import fetch_adzuna_data  # Importa sua função de extração
 from transform import transform_data    # Importa sua função de transformação
 from gold import generate_gold          # Importa sua função de agregação
+from load import load_data
 
 # Configuração de Log Centralizado
 os.makedirs("logs", exist_ok=True)
@@ -21,19 +22,24 @@ def run_pipeline():
     try:
         # STEP 1: EXTRACTION (BRONZE)
         countries = ['br', 'us', 'gb', 'at']
-        logging.info(f"Step 1/3: Extracting data for {countries}...")
+        logging.info(f"Step 1/4: Extracting data for {countries}...")
         for country in countries:
             fetch_adzuna_data(country)
 
         # STEP 2: TRANSFORMATION AND VALIDATION (SILVER)
-        logging.info("Step 2/3: Starting Transformation and Validation (Silver)...")
+        logging.info("Step 2/4: Starting Transformation and Validation (Silver)...")
         metrics = transform_data()
         
         # STEP 3: ANALYTIC AGGREGATION (GOLD)
-        logging.info("Step 3/3: Generating aggregation tables (Gold)...")
+        logging.info("Step 3/4: Generating aggregation tables (Gold)...")
         generate_gold()
 
+        # STEP 4: DATABASE LOADING (SQLITE)
+        logging.info("Step 4/4: Loading data into SQLite Database...")
+        load_data()
 
+
+        # CÁLCULO DE TEMPO E CONCLUSÃO    
         end_time = time.time()
         duration = end_time - start_time
         
@@ -49,6 +55,7 @@ def run_pipeline():
         if metrics:
             # 4. Resumo final também em Inglês
             print(f"Summary: {metrics['processed']} clean jobs and {metrics['quarantined']} in quarantine.")
+
 
     except Exception as e:
         logging.error(f"PIPELINE FAILED: {e}")
