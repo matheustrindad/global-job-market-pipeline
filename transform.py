@@ -58,13 +58,15 @@ def transform_data():
             df[col] = df[col].apply(lambda x: x.get('display_name') if isinstance(x, dict) else x)
 
     rename_map = {
+        'id': 'id',                   # Mantém o ID original da Adzuna
         'title': 'title',
         'company': 'company_name',
         'location': 'location_name',
         'salary_min': 'salary_min',
         'salary_max': 'salary_max',
         'created': 'date_posted',
-        'country_code': 'country'
+        'country_code': 'country',
+        'redirect_url': 'redirect_url' # <--- O CAMPO MÁGICO QUE FALTAVA!
     }
     
     # Filtra e renomeia apenas depois que o DF existe!

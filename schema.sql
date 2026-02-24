@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS jobs (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id TEXT PRIMARY KEY, 
     title TEXT,
     company_name TEXT,
     location_name TEXT,
@@ -8,7 +8,8 @@ CREATE TABLE IF NOT EXISTS jobs (
     date_posted TEXT,
     country TEXT,
     seniority TEXT,
-    extracted_at TEXT
+    extracted_at TEXT,
+    redirect_url TEXT
 );
 
 CREATE VIEW IF NOT EXISTS v_salary_analysis AS
