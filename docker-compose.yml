@@ -1,0 +1,17 @@
+version: '3.8' 
+services: 
+  pipeline: 
+    build: . 
+    volumes: 
+      - ./data:/app/data 
+      - ./logs:/app/logs 
+    env_file: 
+      - .env 
+  db: 
+    image: postgres:15 
+    environment: 
+      POSTGRES_USER: user 
+      POSTGRES_PASSWORD: password 
+      POSTGRES_DB: job_market 
+    ports: 
+      - "5432:5432" 
