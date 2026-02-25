@@ -165,6 +165,8 @@ The pipeline implements a validation layer that checks every record before promo
 - Salary minimum must not be negative
 - Salary max must be greater than or equal to salary min
 - Invalid records are **not deleted** — they are moved to the quarantine folder for review
+- Native Deduplication: The pipeline now uses the original API ID to ensure record uniqueness.
+- Direct Access: Inclusion of the redirect_url column for direct navigation to the job posting source.
 
 ---
 
