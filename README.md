@@ -2,7 +2,7 @@
 
 > An automated, end-to-end data engineering pipeline that extracts, validates, transforms, and analyzes Data Engineering job postings from 4 countries daily — fully orchestrated and self-running.
 
-![Pipeline Status](https://img.shields.io/badge/Pipeline-Passing-brightgreen)
+[![Global Job Market Pipeline](https://github.com/matheustrindad/global-job-market-pipeline/actions/workflows/pipeline.yml/badge.svg)](https://github.com/matheustrindad/global-job-market-pipeline/actions/workflows/pipeline.yml)
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![SQLite](https://img.shields.io/badge/Database-SQLite-lightgrey)
 ![License](https://img.shields.io/badge/License-MIT-green)
@@ -70,7 +70,7 @@ The pipeline runs automatically every day, collecting fresh job market data with
 | Language | Python 3.11 |
 | Data Processing | Pandas |
 | API Client | Requests |
-| Database | SQLite (compatible with PostgreSQL / Snowflake) |
+| Database | PostgreSQL (compatible with Snowflake) |
 | Orchestration | GitHub Actions (daily schedule) |
 | Containerization | Docker + Docker Compose |
 | Dashboard | Streamlit |
