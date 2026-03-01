@@ -1,0 +1,42 @@
+name: Global Job Market Pipeline
+
+on:
+  schedule:
+    # Roda todo dia às 12:00 UTC (09:00 Horário de Brasília)
+    - cron: '0 12 * * *'
+  workflow_dispatch: # Permite rodar manualmente pelo site
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    services:
+      # Sobe o banco de dados na nuvem para o código não dar erro
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_DB: jobs_db
+          POSTGRES_USER: user
+          POSTGRES_PASSWORD: password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependências
+        run: pip install pandas requests sqlalchemy psycopg2-binary
+
+      - name: Executar Pipeline
+        run: python main.py

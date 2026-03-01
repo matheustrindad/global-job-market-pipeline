@@ -3,6 +3,10 @@ import pandas as pd
 import os
 import logging
 from datetime import datetime
+from sqlalchemy import create_engine
+
+DATABASE_URL = os.getenv('DATABASE_URL', 'postgresql://user:password@localhost:5432/jobs_db')
+engine = create_engine(DATABASE_URL)
 
 def load_data():
     db_path = "data/job_market.db"

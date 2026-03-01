@@ -7,6 +7,8 @@ from transform import transform_data    # Importa sua função de transformaçã
 from gold import generate_gold          # Importa sua função de agregação
 from load import load_data
 
+DATABASE_URL = os.getenv('DATABASE_URL', 'postgresql://user:password@localhost:5432/jobs_db')
+
 # Configuração de Log Centralizado
 os.makedirs("logs", exist_ok=True)
 logging.basicConfig(
@@ -34,8 +36,8 @@ def run_pipeline():
         logging.info("Step 3/4: Generating aggregation tables (Gold)...")
         generate_gold()
 
-        # STEP 4: DATABASE LOADING (SQLITE)
-        logging.info("Step 4/4: Loading data into SQLite Database...")
+        # STEP 4: DATABASE LOADING (POSTGRESQL)
+        logging.info("Step 4/4: Loading data into PostgreSQL Database...") # Atualizado de SQLite para Postgres
         load_data()
 
 
