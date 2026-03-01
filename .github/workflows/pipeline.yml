@@ -36,7 +36,8 @@ jobs:
           python-version: '3.11'
 
       - name: Instalar dependências
-        run: pip install pandas requests sqlalchemy psycopg2-binary
+        # Colocamos todas as bibliotecas na mesma linha de instalação
+        run: pip install pandas requests sqlalchemy psycopg2-binary python-dotenv
 
       - name: Executar Pipeline
         run: python main.py
