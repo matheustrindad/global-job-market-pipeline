@@ -1,0 +1,333 @@
+{
+    "mean": 141481,
+    "count": 75832,
+    "results": [
+        {
+            "category": {
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "tag": "it-jobs",
+                "label": "IT Jobs"
+            },
+            "description": "Looking for more than just an assignment? Were looking for you! This isnt just another assignment, but a real opportunity and a challenge for the right person. LRS Consulting Services is seeking a Data Engineer for a Direct Hire opportunity with our client in downtown Chicago, IL! LRS Consulting Services has been delivering the highest quality consultants to our clients since 1979. Weve built a solid reputation for dealing with our clients and our consultants with honesty, integrity, and respec…",
+            "salary_is_predicted": "1",
+            "salary_min": 205589.92,
+            "location": {
+                "display_name": "Schiller Park, Cook County",
+                "__CLASS__": "Adzuna::API::Response::Location",
+                "area": [
+                    "US",
+                    "Illinois",
+                    "Cook County",
+                    "Schiller Park"
+                ]
+            },
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "created": "2026-02-25T10:47:01Z",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTY0NDg5Mjk4MyIsInMiOiJlbzJLNGRJYjhSR3FYcWtvRDdVM1FBIn0.PTe76AHV4Ku8HfNx57bUDRSdhGuzwc8i5IW_fsACXhM",
+            "title": "Data Engineer",
+            "redirect_url": "https://www.adzuna.com/details/5644892983?utm_medium=api&utm_source=9fef4eac",
+            "latitude": 41.9613,
+            "salary_max": 205589.92,
+            "longitude": -87.8849,
+            "company": {
+                "__CLASS__": "Adzuna::API::Response::Company",
+                "display_name": "Levi, Ray & Shoup"
+            },
+            "id": "5644892983"
+        },
+        {
+            "title": "Data Engineer",
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZW8ySzRkSWI4UkdxWHFrb0Q3VTNRQSIsImkiOiI1NjU4NDMzODQzIn0.6AXKlBlKFdUicS4wtK7kq9vWuCiTAnop_uGPkuDdt0Y",
+            "created": "2026-03-08T04:03:32Z",
+            "id": "5658433843",
+            "longitude": -95.712169,
+            "company": {
+                "__CLASS__": "Adzuna::API::Response::Company",
+                "display_name": "JCSI"
+            },
+            "latitude": 37.227341,
+            "salary_max": 93876.8,
+            "redirect_url": "https://www.adzuna.com/land/ad/5658433843?se=eo2K4dIb8RGqXqkoD7U3QA&utm_medium=api&utm_source=9fef4eac&v=C2CD798A73A33D5782E2F9362D900C32427CEA65",
+            "salary_min": 93876.8,
+            "salary_is_predicted": "1",
+            "description": "Data Engineer (Remote – U.S.) Location: Fully Remote Preferred Regions: Midwest U.S. (Indianapolis, IN or Chicago, IL area preferred) About the Opportunity A fast-growing technology company specializing in financial data automation and analytics is seeking a Data Engineer to help design and scale the data infrastructure powering its next-generation platform. The company develops innovative software that transforms how complex financial and tax-related investment data is extracted, validated, di…",
+            "category": {
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "tag": "it-jobs",
+                "label": "IT Jobs"
+            },
+            "location": {
+                "area": [
+                    "US",
+                    "Kansas",
+                    "Montgomery County",
+                    "Independence"
+                ],
+                "__CLASS__": "Adzuna::API::Response::Location",
+                "display_name": "Independence, Montgomery County"
+            }
+        },
+        {
+            "category": {
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "label": "IT Jobs",
+                "tag": "it-jobs"
+            },
+            "salary_min": 110864.72,
+            "description": "Job Description Job Description Job Title: Data Engineer Location: Charlotte, NC (Hybrid) Contract: 12 months on W2 Role Description The process of leading a Digital Transformation across our Americas Division as we continue to modernize our technology, focus on our data-driven approach, grow, and plan for the future. As a result of this expansion, we are seeking experienced software Data engineers spread across Charlotte (N.C), Jersey City (N.J) and India, with 10 years of relevant experience …",
+            "salary_is_predicted": "1",
+            "location": {
+                "area": [
+                    "US",
+                    "North Carolina",
+                    "Mecklenburg County",
+                    "Charlotte"
+                ],
+                "__CLASS__": "Adzuna::API::Response::Location",
+                "display_name": "Charlotte, Mecklenburg County"
+            },
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZW8ySzRkSWI4UkdxWHFrb0Q3VTNRQSIsImkiOiI1NjU4NTgxNDY2In0.UJj3nIra2Cg9i9soK1HMLg5m0NuGG2a2Kv0j6aQs5p0",
+            "created": "2026-03-08T11:54:08Z",
+            "title": "Data Engineer",
+            "latitude": 35.232678,
+            "salary_max": 110864.72,
+            "redirect_url": "https://www.adzuna.com/land/ad/5658581466?se=eo2K4dIb8RGqXqkoD7U3QA&utm_medium=api&utm_source=9fef4eac&v=D9201D40966E4BB2203CE2B903CF976DE30855CB",
+            "id": "5658581466",
+            "longitude": -80.846082,
+            "company": {
+                "__CLASS__": "Adzuna::API::Response::Company",
+                "display_name": "ETHIRE LLC"
+            }
+        },
+        {
+            "location": {
+                "area": [
+                    "US",
+                    "Florida",
+                    "Duval County",
+                    "Jacksonville"
+                ],
+                "display_name": "Jacksonville, Duval County",
+                "__CLASS__": "Adzuna::API::Response::Location"
+            },
+            "salary_min": 236727.12,
+            "redirect_url": "https://www.adzuna.com/details/5637959883?utm_medium=api&utm_source=9fef4eac",
+            "salary_max": 236727.12,
+            "contract_time": "full_time",
+            "id": "5637959883",
+            "company": {
+                "display_name": "Skrill",
+                "__CLASS__": "Adzuna::API::Response::Company"
+            },
+            "created": "2026-02-20T10:30:12Z",
+            "category": {
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "label": "IT Jobs",
+                "tag": "it-jobs"
+            },
+            "salary_is_predicted": "1",
+            "description": "Paysafe is a leading payments platform with an extensive track record of serving merchants and consumers in the global entertainment sectors. Its core purpose is to enable businesses and consumers to connect and transact seamlessly through industry-leading capabilities in payment processing, digital wallet, and online cash solutions. With 29 years of online payment experience, an annualized transactional volume of $152 billion in 2024, and approximately 3,000 employees located in 12 countries, …",
+            "latitude": 30.3073,
+            "longitude": -81.6331,
+            "title": "Director, Data Engineering",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTYzNzk1OTg4MyIsInMiOiJlbzJLNGRJYjhSR3FYcWtvRDdVM1FBIn0.Zn8TEqYZknxv5NrOxxJ3CXdQ5h2qGKIaBL_61me2Cys",
+            "__CLASS__": "Adzuna::API::Response::Job"
+        },
+        {
+            "salary_min": 90000,
+            "salary_is_predicted": "0",
+            "description": "Job Description Job Description Description: Soleo Health is seeking a Senior Data Engineer to support our business needs in Chesterfield, MO. Join us in Simplifying Complex Care! Soleo Health Perks: Competitive Wages 401(k) with a Match Referral Bonus Paid Time Off Great Company Culture Annual Merit Based Increases No Weekends or Holidays Paid Parental Leave Options Affordable Medical, Dental, & Vision Insurance Plans Company Paid Disability & Basic Life Insurance HSA & FSA (including dependen…",
+            "category": {
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "tag": "it-jobs",
+                "label": "IT Jobs"
+            },
+            "location": {
+                "display_name": "Chesterfield, Chesterfield County",
+                "__CLASS__": "Adzuna::API::Response::Location",
+                "area": [
+                    "US",
+                    "South Carolina",
+                    "Chesterfield County",
+                    "Chesterfield"
+                ]
+            },
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZW8ySzRkSWI4UkdxWHFrb0Q3VTNRQSIsImkiOiI1NjQ5MTA3MDU0In0.zxEdiIMD2QEIoAAIrrIR9DkDo7alLC5fzeJDHtxn13s",
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "created": "2026-02-28T16:31:47Z",
+            "title": "Senior Data Engineer",
+            "longitude": -80.088119,
+            "id": "5649107054",
+            "company": {
+                "__CLASS__": "Adzuna::API::Response::Company",
+                "display_name": "Soleo Health Inc"
+            },
+            "latitude": 34.735989,
+            "salary_max": 125000,
+            "redirect_url": "https://www.adzuna.com/land/ad/5649107054?se=eo2K4dIb8RGqXqkoD7U3QA&utm_medium=api&utm_source=9fef4eac&v=4E75C0A035C89318F84D331BFC04C8AAA16BFE19"
+        },
+        {
+            "longitude": -72.936879,
+            "company": {
+                "display_name": "CyberCoders",
+                "__CLASS__": "Adzuna::API::Response::Company"
+            },
+            "id": "5654618682",
+            "salary_max": 171343.89,
+            "latitude": 41.304334,
+            "redirect_url": "https://www.adzuna.com/land/ad/5654618682?se=eo2K4dIb8RGqXqkoD7U3QA&utm_medium=api&utm_source=9fef4eac&v=221835AB6C902099DC6EF3B8429F44BE2CB38BA6",
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "title": "Senior Data Engineer",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTY1NDYxODY4MiIsInMiOiJlbzJLNGRJYjhSR3FYcWtvRDdVM1FBIn0.AMr04DB-9t5QGZw3owEmgDoBda_xlSzfyWyq1hOMvZE",
+            "created": "2026-03-04T22:53:54Z",
+            "location": {
+                "area": [
+                    "US",
+                    "Connecticut",
+                    "New Haven County",
+                    "New Haven"
+                ],
+                "__CLASS__": "Adzuna::API::Response::Location",
+                "display_name": "New Haven, New Haven County"
+            },
+            "salary_min": 171343.89,
+            "description": "Job Description Job Description Senior Data Engineer Senior Data Engineer (Hybrid - AdTech | $150K-$190K  Bonus) Location: Hybrid Availability In NYC (3 days onsite) Compensation: $160,000-$185,000 base  10% bonus We're partnering with a fast-growing, well-funded AdTech company that's transforming how advertisers connect with audiences in the real world. They're blending data, creativity, and technology to power smarter, more meaningful advertising experiences across billboards, transit, and mo…",
+            "salary_is_predicted": "1",
+            "category": {
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "label": "IT Jobs",
+                "tag": "it-jobs"
+            }
+        },
+        {
+            "redirect_url": "https://www.adzuna.com/land/ad/5658551160?se=eo2K4dIb8RGqXqkoD7U3QA&utm_medium=api&utm_source=9fef4eac&v=6079611AB5D9B2B0C6B6D70F4AC86C1BD5603066",
+            "latitude": 35.920884,
+            "salary_max": 125000,
+            "company": {
+                "__CLASS__": "Adzuna::API::Response::Company",
+                "display_name": "Robert Half"
+            },
+            "longitude": -115.165201,
+            "id": "5658551160",
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "title": "Sr. Data Engineer",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTY1ODU1MTE2MCIsInMiOiJlbzJLNGRJYjhSR3FYcWtvRDdVM1FBIn0.d5Kx5vkmeFxmUD4v2d6ZR61Yu3ceYtYo-4U4tCU9nFs",
+            "created": "2026-03-08T09:14:02Z",
+            "location": {
+                "__CLASS__": "Adzuna::API::Response::Location",
+                "display_name": "Las Vegas, Clark County",
+                "area": [
+                    "US",
+                    "Nevada",
+                    "Clark County",
+                    "Las Vegas"
+                ]
+            },
+            "category": {
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "tag": "it-jobs",
+                "label": "IT Jobs"
+            },
+            "description": "Job Description Job Description We are seeking a Senior Data Engineer to join a growing data engineering team responsible for building and scaling an enterprise data platform. This role will focus on developing cloud-based data pipelines within Google Cloud Platform (GCP) while also supporting elements of a legacy on-premise data warehouse environment during an ongoing cloud migration. The ideal candidate will have strong experience building scalable data pipelines, event-driven data architectu…",
+            "salary_is_predicted": "0",
+            "salary_min": 120000
+        },
+        {
+            "location": {
+                "__CLASS__": "Adzuna::API::Response::Location",
+                "display_name": "Chicago, Cook County",
+                "area": [
+                    "US",
+                    "Illinois",
+                    "Cook County",
+                    "Chicago"
+                ]
+            },
+            "category": {
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "label": "IT Jobs",
+                "tag": "it-jobs"
+            },
+            "salary_is_predicted": "1",
+            "description": "Job Description Job Description Databricks Data Engineer Location: Chicago, IL (Hybrid/Remote options as applicable) Company: Westberke Consulting Employment Type: Contractor About Westberke Consulting At Westberke Consulting, we bridge the gap between complex data challenges and actionable business intelligence. Based in Elmhurst, IL, our team prides itself on delivering high-impact, scalable solutions for clients ranging from mid-market leaders to enterprise giants. We are looking for a Datab…",
+            "salary_min": 124972.43,
+            "redirect_url": "https://www.adzuna.com/land/ad/5638003464?se=eo2K4dIb8RGqXqkoD7U3QA&utm_medium=api&utm_source=9fef4eac&v=97D67261FBF6E392074035CFFADE37CBEB25ED97",
+            "salary_max": 124972.43,
+            "id": "5638003464",
+            "company": {
+                "__CLASS__": "Adzuna::API::Response::Company",
+                "display_name": "Westberke Consulting"
+            },
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTYzODAwMzQ2NCIsInMiOiJlbzJLNGRJYjhSR3FYcWtvRDdVM1FBIn0._4XVOJza7bbq_Y3dlUPYtXEfloU2J2dAx3qqiHWLkI0",
+            "created": "2026-02-20T11:02:49Z",
+            "title": "Databricks Data Engineer"
+        },
+        {
+            "location": {
+                "__CLASS__": "Adzuna::API::Response::Location",
+                "display_name": "New York City, New York",
+                "area": [
+                    "US",
+                    "New York",
+                    "New York City"
+                ]
+            },
+            "description": "Job Description Job Description Professional Search Group (PSG) has teamed up with a world class media and entertainment company to find an experienced Sr Data Engineer to join the team, where technology meets storytelling. This is a well-established, US based business that has a long-standing partnership with Professional Search Group. We are looking for someone who is passionate about shaping the future of entertainment through innovation. Are you ready to work your magic with one of the worl…",
+            "salary_is_predicted": "1",
+            "salary_min": 108827.66,
+            "category": {
+                "tag": "it-jobs",
+                "label": "IT Jobs",
+                "__CLASS__": "Adzuna::API::Response::Category"
+            },
+            "id": "5636150259",
+            "company": {
+                "__CLASS__": "Adzuna::API::Response::Company",
+                "display_name": "Professional Search Group "
+            },
+            "redirect_url": "https://www.adzuna.com/land/ad/5636150259?se=eo2K4dIb8RGqXqkoD7U3QA&utm_medium=api&utm_source=9fef4eac&v=8114E45E64325160B3D104455234B20ACE063EE8",
+            "salary_max": 108827.66,
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "title": "Senior Data Engineer",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZW8ySzRkSWI4UkdxWHFrb0Q3VTNRQSIsImkiOiI1NjM2MTUwMjU5In0.Qo3fAflbsdNCgvPFncl0AOmm-4Ek873fgm3yXnaa9Hg",
+            "created": "2026-02-19T10:36:21Z"
+        },
+        {
+            "latitude": 33.089009,
+            "salary_max": 109080.98,
+            "redirect_url": "https://www.adzuna.com/land/ad/5657115744?se=eo2K4dIb8RGqXqkoD7U3QA&utm_medium=api&utm_source=9fef4eac&v=BF17B79A767AB192770FA28EC5A713AA07CE10BB",
+            "longitude": -96.886392,
+            "id": "5657115744",
+            "company": {
+                "__CLASS__": "Adzuna::API::Response::Company",
+                "display_name": "THREE POINT TURN INC"
+            },
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "title": "Contract Data Engineer",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZW8ySzRkSWI4UkdxWHFrb0Q3VTNRQSIsImkiOiI1NjU3MTE1NzQ0In0.ZoRwCxcDudC_8Z7SU_aXyYpyBHvd2hDmpCIxk3IKT2k",
+            "created": "2026-03-06T22:21:11Z",
+            "location": {
+                "display_name": "The Colony, Denton County",
+                "__CLASS__": "Adzuna::API::Response::Location",
+                "area": [
+                    "US",
+                    "Texas",
+                    "Denton County",
+                    "The Colony"
+                ]
+            },
+            "category": {
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "label": "IT Jobs",
+                "tag": "it-jobs"
+            },
+            "salary_min": 109080.98,
+            "salary_is_predicted": "1",
+            "description": "Job Description Job Description About Us: Three Point Turn is a forward-thinking technology company focused on delivering innovative, scalable solutions that empower organizations to harness their data and drive strategic growth. We're looking for a Data Engineer with a strong background in back-end development and data warehousing to join us on a contract basis. What You’ll Do: Design, build, and maintain back-end systems using C# and SQL Develop and optimize data warehouse solutions within th…"
+        }
+    ],
+    "__CLASS__": "Adzuna::API::Response::JobSearchResults"
+}

@@ -1,0 +1,299 @@
+{
+    "results": [
+        {
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "created": "2026-03-07T04:39:19Z",
+            "redirect_url": "https://www.adzuna.at/land/ad/5657118772?se=mMgr4tIb8RG9s5mp6oeRTw&utm_medium=api&utm_source=9fef4eac&v=5A79B17751C37CA0414DEBC479B23CECCC06F798",
+            "category": {
+                "label": "IT-Stellen",
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "tag": "it-jobs"
+            },
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTY1NzExODc3MiIsInMiOiJtTWdyNHRJYjhSRzlzNW1wNm9lUlR3In0.7rxsZOdDspaKsrQE804WlE2Z7nH2ps-zcZ7naxVY3K8",
+            "description": "SIH – Schmid Industrieholding ist eine internationale Unternehmensgruppe mit mehr als 100 Unternehmen in 23 Ländern. Das familiengeführte Unternehmen mit Sitz in Wopfing (Österreich) beschäftigt rund 6.900 Mitarbeiter:innen. Die im SIH-Headquarter tätigen Kolleg:innen sind in der Baumit Beteiligungen GmbH beschäftigt. Das Presense – Leading from the Future Program der Schmid Industrieholding hat das Ziel, eine unternehmensweite einheitliche Plattform für Reporting, Analytics und Data AI umzuset…",
+            "company": {
+                "display_name": "Baumit GmbH",
+                "__CLASS__": "Adzuna::API::Response::Company"
+            },
+            "latitude": 47.817335,
+            "longitude": 16.240693,
+            "id": "5657118772",
+            "title": "Data Engineer & Data Modeller",
+            "location": {
+                "display_name": "Wiener Neustadt, Niederösterreich",
+                "area": [
+                    "Österreich",
+                    "Niederösterreich",
+                    "Wiener Neustadt"
+                ],
+                "__CLASS__": "Adzuna::API::Response::Location"
+            },
+            "salary_is_predicted": "0"
+        },
+        {
+            "description": "SIH – Schmid Industrieholding ist eine internationale Unternehmensgruppe mit mehr als 100 Unternehmen in 23 Ländern. Das familiengeführte Unternehmen mit Sitz in Wopfing (Österreich) beschäftigt rund 6.900 Mitarbeiter:innen. Die im SIH-Headquarter tätigen Kolleg:innen sind in der Baumit Beteiligungen GmbH beschäftigt. Das Presense – Leading from the Future Program der Schmid Industrieholding hat das Ziel, eine unternehmensweite einheitliche Plattform für Reporting, Analytics und Data AI umzuset…",
+            "company": {
+                "__CLASS__": "Adzuna::API::Response::Company",
+                "display_name": "Baumit GmbH"
+            },
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTY1NzExODc2NiIsInMiOiJtTWdyNHRJYjhSRzlzNW1wNm9lUlR3In0.Dh4YI1uQtAXCSE-mdVM1YVGPooLPngnGal8Wbq-ROXo",
+            "category": {
+                "tag": "it-jobs",
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "label": "IT-Stellen"
+            },
+            "redirect_url": "https://www.adzuna.at/land/ad/5657118766?se=mMgr4tIb8RG9s5mp6oeRTw&utm_medium=api&utm_source=9fef4eac&v=523D7045C3CD4B11F956D4401322B08CAC655273",
+            "created": "2026-03-07T04:39:19Z",
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "salary_is_predicted": "0",
+            "location": {
+                "display_name": "Österreich",
+                "__CLASS__": "Adzuna::API::Response::Location",
+                "area": [
+                    "Österreich"
+                ]
+            },
+            "title": "Data Engineer & Data Modeller",
+            "id": "5657118766"
+        },
+        {
+            "company": {
+                "display_name": "Energie AG Oberösterreich",
+                "__CLASS__": "Adzuna::API::Response::Company"
+            },
+            "description": "Die Energie AG ist eine sichere Arbeitgeberin mit Top-Karrierechancen und einem klaren Fokus auf Nachhaltigkeit. Mit ihren vielseitigen Aufgabenfeldern - von Energie bis Entsorgung - bietet sie ein zukunftsorientiertes Arbeitsumfeld. Für unser Tochterunternehmen Energie AG Oberösterreich Trading GmbH, suchen wir eine:n Data Engineer:in (all genders) Linz Vollzeit Aufgaben Konzeption und Umsetzung von skalierbaren Datenlösungen unter Nutzung moderner Cloud-Technologien. Entwicklung und Optimieru…",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NDMxMjY3MyIsInMiOiJtTWdyNHRJYjhSRzlzNW1wNm9lUlR3In0.370Uz3-ae3fYMI8lv1E8DUEoXeJRAZ6dOETYR8Td7Zo",
+            "category": {
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "tag": "unknown",
+                "label": "Unknown"
+            },
+            "redirect_url": "https://www.adzuna.at/land/ad/5544312673?se=mMgr4tIb8RG9s5mp6oeRTw&utm_medium=api&utm_source=9fef4eac&v=76A295D455304DE49908FC593872A2AD04EB3122",
+            "created": "2025-12-16T18:36:37Z",
+            "contract_time": "full_time",
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "salary_is_predicted": "0",
+            "location": {
+                "area": [
+                    "Österreich",
+                    "Oberösterreich",
+                    "Linz"
+                ],
+                "__CLASS__": "Adzuna::API::Response::Location",
+                "display_name": "Linz, Oberösterreich"
+            },
+            "title": "Data Engineer:in (all genders)",
+            "id": "5544312673",
+            "contract_type": "permanent",
+            "longitude": 14.293495,
+            "latitude": 48.290256
+        },
+        {
+            "company": {
+                "display_name": "Energie AG Oberösterreich",
+                "__CLASS__": "Adzuna::API::Response::Company"
+            },
+            "description": "Die Energie AG ist eine sichere Arbeitgeberin mit Top-Karrierechancen und einem klaren Fokus auf Nachhaltigkeit. Mit ihren vielseitigen Aufgabenfeldern – von Energie bis Entsorgung – bietet sie ein zukunftsorientiertes Arbeitsumfeld. Für unserTochterunternehmen Energie AG Oberösterreich Trading GmbH, suchen wir eine:n Data Engineer:in (all genders) Linz Vollzeit Konzeption und Umsetzung von skalierbaren Datenlösungen unter Nutzung moderner Cloud-Technologien. Entwicklung und Optimierung von aut…",
+            "category": {
+                "tag": "it-jobs",
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "label": "IT-Stellen"
+            },
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTY1MzIzNDE0NCIsInMiOiJtTWdyNHRJYjhSRzlzNW1wNm9lUlR3In0.uSXwxYvxicuDPu12NpdGSDepZbAPPYRIzu87IK8kpvs",
+            "created": "2026-03-04T04:38:29Z",
+            "redirect_url": "https://www.adzuna.at/land/ad/5653234144?se=mMgr4tIb8RG9s5mp6oeRTw&utm_medium=api&utm_source=9fef4eac&v=303D105D27861808AA54D24CF1E7A8B13231FD19",
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "location": {
+                "area": [
+                    "Österreich",
+                    "Oberösterreich",
+                    "Linz"
+                ],
+                "__CLASS__": "Adzuna::API::Response::Location",
+                "display_name": "Linz, Oberösterreich"
+            },
+            "salary_is_predicted": "0",
+            "id": "5653234144",
+            "title": "Data Engineer:in (all genders)",
+            "latitude": 48.290256,
+            "longitude": 14.293495
+        },
+        {
+            "contract_type": "permanent",
+            "id": "5608564671",
+            "title": "Data Engineer & Data Modeller (m/w/d)",
+            "location": {
+                "display_name": "Österreich",
+                "__CLASS__": "Adzuna::API::Response::Location",
+                "area": [
+                    "Österreich"
+                ]
+            },
+            "salary_is_predicted": "0",
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "contract_time": "full_time",
+            "created": "2026-02-01T10:31:37Z",
+            "redirect_url": "https://www.adzuna.at/land/ad/5608564671?se=mMgr4tIb8RG9s5mp6oeRTw&utm_medium=api&utm_source=9fef4eac&v=DBD67CAC036FA7745E9ED62D7D4DEA90307FB034",
+            "category": {
+                "tag": "unknown",
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "label": "Unknown"
+            },
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTYwODU2NDY3MSIsInMiOiJtTWdyNHRJYjhSRzlzNW1wNm9lUlR3In0.u21YuRM-788L1WZQc_Su0fx6nMC1ymVC7QCbiFZhd9c",
+            "company": {
+                "__CLASS__": "Adzuna::API::Response::Company",
+                "display_name": "Baumit GmbH"
+            },
+            "description": "SIH - Schmid Industrieholding ist eine internationale Unternehmensgruppe mit mehr als 100 Unternehmen in 23 Ländern. Das familiengeführte Unternehmen mit Sitz in Wopfing (Österreich) beschäftigt rund 6.900 Mitarbeiter:innen. Die im SIH-Headquarter tätigen Kolleg:innen sind in der Baumit Beteiligungen GmbH beschäftigt. Wir suchen: Data Engineer & Data Modeller Entwickler:in Lernbereitschaft Datentransformation & -sicherheit Ihre Mission: Das Presense - Leading from the Future Program der Schmid …"
+        },
+        {
+            "redirect_url": "https://www.adzuna.at/land/ad/5658302296?se=mMgr4tIb8RG9s5mp6oeRTw&utm_medium=api&utm_source=9fef4eac&v=94F1BE34145F647B612FFA9AF02A0808113DEAC2",
+            "created": "2026-03-08T04:11:38Z",
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "company": {
+                "display_name": "adesso Austria GmbH",
+                "__CLASS__": "Adzuna::API::Response::Company"
+            },
+            "description": "adesso Austria gehört zu den Top-Technologie- und Beratungsunternehmen in Österreich mit Geschäftsstellen in Wien und Graz und ist Teil der adesso Gruppe. Gemeinsam und auf Augenhöhe mit unseren Kunden setzen wir agile Digitalisierungsprojekte um. Unseren Erfolg aber erreichen wir nur durch eins: die Menschen bei adesso! Wir legen in gleichem Maße großen Wert auf die persönliche Situation jedes adessi, auf die Zusammenarbeit in den Teams und auf unsere Identität als adesso Austria. Was uns verb…",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTY1ODMwMjI5NiIsInMiOiJtTWdyNHRJYjhSRzlzNW1wNm9lUlR3In0.HgC336DnDtwdDK9Xf5KIkOdiJ0CV2lRrYkH0R0r77JI",
+            "category": {
+                "tag": "it-jobs",
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "label": "IT-Stellen"
+            },
+            "salary_is_predicted": "0",
+            "location": {
+                "area": [
+                    "Österreich"
+                ],
+                "__CLASS__": "Adzuna::API::Response::Location",
+                "display_name": "Österreich"
+            },
+            "id": "5658302296",
+            "title": "Lead Data Engineer (all genders)"
+        },
+        {
+            "company": {
+                "__CLASS__": "Adzuna::API::Response::Company",
+                "display_name": "adesso Austria GmbH"
+            },
+            "description": "adesso Austria gehört zu den Top-Technologie- und Beratungsunternehmen in Österreich mit Geschäftsstellen in Wien und Graz und ist Teil der adesso Gruppe. Gemeinsam und auf Augenhöhe mit unseren Kunden setzen wir agile Digitalisierungsprojekte um. Unseren Erfolg aber erreichen wir nur durch eins: die Menschen bei adesso! Wir legen in gleichem Maße großen Wert auf die persönliche Situation jedes adessi, auf die Zusammenarbeit in den Teams und auf unsere Identität als adesso Austria. Was uns verb…",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoibU1ncjR0SWI4Ukc5czVtcDZvZVJUdyIsImkiOiI1NjU4MzAyMzAwIn0.9zwSy6jmB6vfPJeURYMlvLLxlBDHgQ3USU4ENjkU4L0",
+            "category": {
+                "label": "IT-Stellen",
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "tag": "it-jobs"
+            },
+            "redirect_url": "https://www.adzuna.at/land/ad/5658302300?se=mMgr4tIb8RG9s5mp6oeRTw&utm_medium=api&utm_source=9fef4eac&v=59CB436EE301D7D54E7D5F039D4F66A0CAD71373",
+            "created": "2026-03-08T04:11:39Z",
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "salary_is_predicted": "0",
+            "location": {
+                "display_name": "Graz, Steiermark",
+                "area": [
+                    "Österreich",
+                    "Steiermark",
+                    "Graz"
+                ],
+                "__CLASS__": "Adzuna::API::Response::Location"
+            },
+            "title": "Lead Data Engineer (all genders)",
+            "id": "5658302300",
+            "longitude": 15.439358,
+            "latitude": 47.070503
+        },
+        {
+            "longitude": 16.354031,
+            "latitude": 48.208144,
+            "salary_is_predicted": "0",
+            "location": {
+                "area": [
+                    "Österreich",
+                    "Wien"
+                ],
+                "__CLASS__": "Adzuna::API::Response::Location",
+                "display_name": "Wien, Österreich"
+            },
+            "id": "5658302298",
+            "title": "Lead Data Engineer (all genders)",
+            "redirect_url": "https://www.adzuna.at/land/ad/5658302298?se=mMgr4tIb8RG9s5mp6oeRTw&utm_medium=api&utm_source=9fef4eac&v=71BE987C273C9B69812A4A08CEA43482424D168A",
+            "created": "2026-03-08T04:11:38Z",
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "description": "adesso Austria gehört zu den Top-Technologie- und Beratungsunternehmen in Österreich mit Geschäftsstellen in Wien und Graz und ist Teil der adesso Gruppe. Gemeinsam und auf Augenhöhe mit unseren Kunden setzen wir agile Digitalisierungsprojekte um. Unseren Erfolg aber erreichen wir nur durch eins: die Menschen bei adesso! Wir legen in gleichem Maße großen Wert auf die persönliche Situation jedes adessi, auf die Zusammenarbeit in den Teams und auf unsere Identität als adesso Austria. Was uns verb…",
+            "company": {
+                "display_name": "adesso Austria GmbH",
+                "__CLASS__": "Adzuna::API::Response::Company"
+            },
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTY1ODMwMjI5OCIsInMiOiJtTWdyNHRJYjhSRzlzNW1wNm9lUlR3In0.QmKvzMQtNPQHmNWRgi9JGSM_AIQ89q24sTNAAe8xA7E",
+            "category": {
+                "label": "IT-Stellen",
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "tag": "it-jobs"
+            }
+        },
+        {
+            "longitude": 13.083054,
+            "latitude": 47.761106,
+            "salary_is_predicted": "0",
+            "location": {
+                "area": [
+                    "Österreich",
+                    "Salzburg",
+                    "Salzburg-Umgebung",
+                    "Elsbethen"
+                ],
+                "__CLASS__": "Adzuna::API::Response::Location",
+                "display_name": "Elsbethen, Salzburg-Umgebung"
+            },
+            "id": "5564607250",
+            "title": "Senior Data Engineer",
+            "redirect_url": "https://www.adzuna.at/land/ad/5564607250?se=mMgr4tIb8RG9s5mp6oeRTw&utm_medium=api&utm_source=9fef4eac&v=4DC9EB7572040486D9DCE7B717CEA8CC67C4D580",
+            "created": "2026-01-02T16:26:20Z",
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "description": "Vollzeit Senior Data Engineer Elsbethen, Österreich Apply now At the heart of Red Bull's global sports universe is the Sports Data Platform (SDP), the technical foundation that turns data into a competitive advantage. We are seeking a Senior Data Engineer to play a central role in building and shaping this platform. This is a unique opportunity to own and evolve a critical data system that serves Red Bull's sports and athletes worldwide. As the lead technical expert for the platform, your role …",
+            "company": {
+                "display_name": "Red Bull",
+                "__CLASS__": "Adzuna::API::Response::Company"
+            },
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoibU1ncjR0SWI4Ukc5czVtcDZvZVJUdyIsImkiOiI1NTY0NjA3MjUwIn0.FWm2DWQBRmsK0sV8ovRVUcECTyLwrigWdTkwPzNUux0",
+            "category": {
+                "tag": "unknown",
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "label": "Unknown"
+            }
+        },
+        {
+            "salary_is_predicted": "0",
+            "location": {
+                "__CLASS__": "Adzuna::API::Response::Location",
+                "area": [
+                    "Österreich",
+                    "Steiermark",
+                    "Graz"
+                ],
+                "display_name": "Graz, Steiermark"
+            },
+            "title": "Data Engineer (Data Quality & Operations)",
+            "id": "5648187450",
+            "longitude": 15.439358,
+            "latitude": 47.070503,
+            "company": {
+                "display_name": "Institut AllergoSan Pharma GmbH",
+                "__CLASS__": "Adzuna::API::Response::Company"
+            },
+            "description": "Data Engineer (Data Quality & Operations) m/w/d Vollzeit Graz Schwerpunkte * Verantwortung für die operative Datenbereinigung sowie die Sicherstellung der Datenqualität im Rahmen von Datenprojekten * Konzeption und Aufbau einer belastbaren, skalierbaren Datenstruktur als Grundlage für zukünftige Automatisierungen und datengetriebene Auswertungen * Fundierte Erfahrung im Umgang mit komplexen Datensätzen sowie in der Gestaltung und Optimierung von Datenverarbeitungsprozessen * Ganzheitliche End-t…",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoibU1ncjR0SWI4Ukc5czVtcDZvZVJUdyIsImkiOiI1NjQ4MTg3NDUwIn0.xht5rwadWNfgak34ooez2AQkGru-YqFNU9bCWyfWTK0",
+            "category": {
+                "tag": "unknown",
+                "__CLASS__": "Adzuna::API::Response::Category",
+                "label": "Unknown"
+            },
+            "redirect_url": "https://www.adzuna.at/land/ad/5648187450?se=mMgr4tIb8RG9s5mp6oeRTw&utm_medium=api&utm_source=9fef4eac&v=9EE6812A545E6741807A1E7A7BD425128A12276A",
+            "created": "2026-02-28T04:30:33Z",
+            "__CLASS__": "Adzuna::API::Response::Job"
+        }
+    ],
+    "mean": 69546.36,
+    "count": 142,
+    "__CLASS__": "Adzuna::API::Response::JobSearchResults"
+}
