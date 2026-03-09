@@ -32,7 +32,7 @@ def load_data():
             
             # Carrega os dados
             df.to_sql('jobs', conn, if_exists='append', index=False)
-        
+
         logging.info(f"SUCCESS: Loaded {len(df)} jobs into PostgreSQL!")
         return True
     except Exception as e:
