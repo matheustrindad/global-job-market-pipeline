@@ -1,17 +1,29 @@
-version: '3.8' 
-services: 
-  pipeline: 
-    build: . 
-    volumes: 
-      - ./data:/app/data 
-      - ./logs:/app/logs 
-    env_file: 
-      - .env 
-  db: 
-    image: postgres:15 
-    environment: 
-      POSTGRES_USER: user 
-      POSTGRES_PASSWORD: password 
-      POSTGRES_DB: job_market 
-    ports: 
-      - "5432:5432" 
+version: '3.8'
+
+services:
+  # Serviço 1: Banco de Dados Profissional
+  postgres_db:
+    image: postgres:15
+    container_name: global_job_db
+    environment:
+      POSTGRES_DB: jobs_db
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # Serviço 2: Visualização (Dashboard)
+  dashboard:
+    build: .
+    container_name: streamlit_app
+    ports:
+      - "8501:8501"
+    environment:
+      - DATABASE_URL=postgresql://user:password@postgres_db:5432/jobs_db
+    depends_on:
+      - postgres_db
+
+volumes:
+  postgres_data:

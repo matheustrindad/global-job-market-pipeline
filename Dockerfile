@@ -1,6 +1,16 @@
-FROM python:3.11-slim 
-WORKDIR /app 
-COPY requirements.txt . 
-RUN pip install --no-cache-dir -r requirements.txt 
-COPY . . 
-CMD ["python", "main.py"] 
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Copia as dependências e instala
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copia o código do dashboard
+COPY app.py .
+COPY .env .
+
+# Porta padrão do Streamlit
+EXPOSE 8501
+
+CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]

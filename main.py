@@ -18,6 +18,11 @@ logging.basicConfig(
 )
 
 def run_pipeline():
+    for folder in ['data/bronze', 'data/silver', 'data/gold', 'logs']:
+        if not os.path.exists(folder):
+            os.makedirs(folder)
+            logging.info(f"Folder '{folder}' created successfully.")
+            
     start_time = time.time()
     logging.info("=== INICIANDO PIPELINE GLOBAL JOB MARKET ===")
 
