@@ -8,20 +8,26 @@ st.set_page_config(page_title="Global Job Market Pipeline", layout="wide")
 st.title("🌍 Global Job Market — Data Engineering Dashboard")
 st.caption("Automated pipeline | Data refreshed daily via GitHub Actions")
 
-# Carrega dados do Gold
+# DEFINA OS CAMINHOS ANTES DE USAR
 gold_path = "data/gold"
-
 salary_file = os.path.join(gold_path, "salary_by_country.csv")
 seniority_file = os.path.join(gold_path, "jobs_by_seniority.csv")
 
-# Carrega Silver para tabela de vagas
-silver_files = sorted(glob.glob("data/silver/*.csv"))
+salary_df = pd.read_csv(salary_file) if os.path.exists(salary_file) else None
+seniority_df = pd.read_csv(seniority_file) if os.path.exists(seniority_file) else None
 
-if not silver_files:
-    st.error("No data found. Run the pipeline first.")
+# Em vez de confiar apenas no glob, vamos buscar o arquivo mais recente de forma direta
+silver_dir = "data/silver"
+files = [os.path.join(silver_dir, f) for f in os.listdir(silver_dir) if f.endswith('.csv')]
+
+if not files:
+    st.error("Nenhum arquivo CSV encontrado em data/silver/")
     st.stop()
 
-df = pd.read_csv(silver_files[-1])
+# Pega o arquivo mais recente
+latest_file = max(files, key=os.path.getctime)
+df = pd.read_csv(latest_file)
+
 salary_df = pd.read_csv(salary_file) if os.path.exists(salary_file) else None
 seniority_df = pd.read_csv(seniority_file) if os.path.exists(seniority_file) else None
 
