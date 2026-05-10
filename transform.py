@@ -4,7 +4,7 @@ import os
 import logging
 from datetime import datetime
 
-# 1. Definição da Função (Apenas uma vez)
+# 1. Definição da Função de Senioridade
 def classify_seniority(title):
     t = str(title).lower()
     if any(x in t for x in ['sr', 'senior', 'sênior', 'lead', 'principal', 'staff']): 
@@ -13,6 +13,7 @@ def classify_seniority(title):
         return 'Junior'
     return 'Mid-Level'
 
+# 2. Validação de Regras de Negócio
 def validate_job(row):
     if not row['title'] or str(row['title']).strip() == "": return False
     if row['salary_min'] < 0: return False
@@ -58,7 +59,7 @@ def transform_data():
             df[col] = df[col].apply(lambda x: x.get('display_name') if isinstance(x, dict) else x)
 
     rename_map = {
-        'id': 'id',                   # Mantém o ID original da Adzuna
+        'id': 'id',
         'title': 'title',
         'company': 'company_name',
         'location': 'location_name',
@@ -66,21 +67,34 @@ def transform_data():
         'salary_max': 'salary_max',
         'created': 'date_posted',
         'country_code': 'country',
-        'redirect_url': 'redirect_url' # <--- O CAMPO MÁGICO QUE FALTAVA!
+        'redirect_url': 'redirect_url'
     }
     
-    # Filtra e renomeia apenas depois que o DF existe!
     df = df[[c for c in rename_map.keys() if c in df.columns]].copy()
     df.rename(columns=rename_map, inplace=True)
 
-    # --- PASSO 3: APLICAÇÃO DA LÓGICA DE SENIORIDADE E TEMPO ---
+    # --- PASSO 3: LIMPEZA DE TIPOS ---
     df.drop_duplicates(inplace=True)
     df['salary_min'] = pd.to_numeric(df['salary_min'], errors='coerce').fillna(0)
     df['salary_max'] = pd.to_numeric(df['salary_max'], errors='coerce').fillna(0)
     
-    # Agora sim, aplicamos a senioridade com o DF já pronto
     df['seniority'] = df['title'].apply(classify_seniority) 
     df['extracted_at'] = datetime.now().isoformat()
+
+    # --- PASSO 3.5: FILTRO DE VAGAS ANTIGAS (CORRIGIDO) ---
+    if 'date_posted' in df.columns:
+        # AQUI FOI CORRIGIDA A INDENTAÇÃO
+        df['date_posted'] = pd.to_datetime(df['date_posted'], errors='coerce', utc=True)
+        cutoff = pd.Timestamp.now(tz='UTC') - pd.Timedelta(days=28)
+        
+        old_jobs = df[df['date_posted'] < cutoff]
+        df = df[df['date_posted'] >= cutoff]
+        
+        if len(old_jobs) > 0:
+            logging.info(f"FILTERED OUT: {len(old_jobs)} jobs older than 28 days")
+        
+        # Converte para string para salvar no CSV de forma limpa
+        df['date_posted'] = df['date_posted'].dt.strftime('%Y-%m-%d')
 
     # --- PASSO 4: VALIDAÇÃO E QUARENTENA ---
     df['is_valid'] = df.apply(validate_job, axis=1)
