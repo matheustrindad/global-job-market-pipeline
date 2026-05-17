@@ -183,7 +183,7 @@ The pipeline runs automatically every day at 09:00 UTC via GitHub Actions. The w
 
 ## 📈 Dashboard
 
-Live dashboard available at: **[(https://lnkd.in/dC94fxzw)]**
+Live dashboard available at: **[(https://global-job-market-pipeline-jsixnj8fvadukvrjyvjrd9.streamlit.app/)]**
 
 ---
 
